@@ -1,0 +1,75 @@
+---
+title: "assignment1"
+author: "Diego S. Lopez"
+date: "2026-09-24, 11:30 p.m."
+output: html_document
+---
+# question1
+```{r}
+
+height <- 175
+height
+```
+
+# question2
+```{r}
+25*4
+25*4-10
+
+```
+
+
+# question3
+```{r}
+sqrt(81)
+```
+
+# question4
+```{r}
+message <- "R is fun!"
+message
+
+```
+
+# question5
+```{r}
+a <- 10
+b <- 5
+c <- a + b
+c
+```
+
+# question6
+```{r}
+
+15>20
+
+```
+
+# question7
+```{r}
+class("Hello World")
+
+```
+
+# question8
+```{r}
+log(-1)
+```
+
+```{r, warning = FALSE}
+log(-1)
+```
+
+# question9 
+```{r, message=FALSE}
+library(dplyr)
+```
+
+# question10
+```{r}
+grades <- c(80,90, 75, 95, 85)
+average <- mean(grades)
+average
+```
+
