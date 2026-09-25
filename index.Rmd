@@ -8,18 +8,18 @@ output:
   highlight: github
 ---
 
-# About me <br>
+# About me: <br>
 
 
 <img src="C:\Users\diego\Documents\Diego 2026 intro to R\running.jpeg" width="550" height="320"/>
 
-#### A photo of me (grey shirt) running with my friends. <br> <br> <br> <br> <br>
+#### A photo of me (grey shirt) running with my friends. <br> <br> <br> <br>
 
 
 ### Hello! My name is Diego Lopez. Im an aspiring entomologist. As of August 2026, I started learning R.
 
 
-## Facts about me:
+# Fun facts:
 
 * Im a college student in my fourth year. <br>
 
@@ -27,9 +27,10 @@ output:
 * I would love to study any insect I could, but im quite fond of ants. <br>
 
 
-* I love the nature side of biology because of the videogames I used to play when I was growing up.
+* I love the nature side of biology because of the videogames I used to play when I was growing up. <br> <br> <br>
 
 
+## Assignment section:
 
 
 
