@@ -32,9 +32,9 @@ output:
 
 ## Assignment section:
 
-R Tutorials Prompts:
-[HomeWork 1](assignment1.html)
-
+R Tutorials Prompts: <br>
+[Homework 1](assignment1.html) <br>
+[Homework 2](assignment2.html)
 
 
 
