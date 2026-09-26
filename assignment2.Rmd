@@ -1,0 +1,66 @@
+---
+title: "assignment2"
+author: "Diego S. Lopez"
+date: "2026-09-26, 9:33p.m."
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(gapminder)
+library(dplyr)
+```
+
+
+
+# Question1
+```{r}
+class("gapminder")
+```
+# Question2
+```{r}
+gapminder |> 
+  filter(lifeExp < 29) |> 
+  head(6)
+```
+# Question3
+```{r}
+gapminder |> 
+  filter(country == "Rwanda", year > 1979) |> 
+  head(6)
+```
+# Question4
+```{r}
+gapminder |> select(-gdpPercap) |> head(7)
+```
+# Question5
+```{r}
+gapminder |> 
+  arrange(lifeExp) |> 
+  head(8)
+```
+# Question 6
+```{r}
+gapminder |> arrange(desc(lifeExp)) |> head(9)
+```
+# Question7
+```{r}
+gapminder |> select(year, lifeExp) |> head(10)
+```
+#   Question8
+```{r}
+gapminder |> filter(country == "Cambodia") |> 
+  select(year, lifeExp) |> head(7)
+```
+# Question9
+```{r}
+gapminder |> filter(continent == "Africa") |> 
+  head(6)
+```
+# Question10
+```{r}
+gapminder |> mutate(lifeExp_months = lifeExp * 12) |> head(8)
+```
