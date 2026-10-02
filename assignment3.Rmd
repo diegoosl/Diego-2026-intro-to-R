@@ -43,6 +43,6 @@ shapiro.test(trees$Volume)
 
 shapiro.test(trees$Girth)
 
-# GIRTH IS NORMALLY DISTRIBUTED.
 ```
 
+# NORMAL GIRTH DISTRIBUTION
