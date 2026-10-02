@@ -1,0 +1,48 @@
+---
+title: "assignment3"
+author: "Diego S. Lopez"
+date: "2026-10-02, 7:00p.m."
+output: html_document
+---
+```{r}
+# Q1
+data("trees")
+head(trees)
+library(ggplot2)
+ggplot(trees, aes(x = Girth)) +
+  geom_histogram(binwidth = 2, fill = "blue", color = "black") + labs(title="Distribution of Girth")
+```
+```{r}
+# Q2
+data("trees")
+head(trees)
+library(ggplot2)
+ggplot(trees, aes(x = Volume)) +
+  geom_histogram(binwidth = 10, fill = "pink", color = "black") + labs(title="Distribution of Volume")
+```
+
+```{r}
+# Q3
+data("trees")
+head(trees)
+data(trees)
+library(ggplot2)
+ggplot(trees, aes(x= Girth, y = Volume)) +
+  geom_point(color = "green", size = 2) + labs(title= "Girth vs Volume", x = "Girth", y = "Volume")
+```
+```{r}
+# Q4
+
+shapiro.test(trees$Volume)
+
+# NOT A NORMAL DISTRIBUTION.
+```
+
+```{r}
+# Q5
+
+shapiro.test(trees$Girth)
+
+# GIRTH IS NORMALLY DISTRIBUTED.
+```
+

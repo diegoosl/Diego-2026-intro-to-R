@@ -35,6 +35,7 @@ output:
 R Tutorials Prompts: <br>
 [Homework 1](assignment1.html) <br>
 [Homework 2](assignment2.html)
+[Homework 3](assignment3.html)
 
 
 
