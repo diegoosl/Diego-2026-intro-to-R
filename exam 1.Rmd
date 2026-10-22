@@ -1,0 +1,79 @@
+---
+title: "Exam 1"
+author: "Diego S. Lopez"
+date: "2026-10-15"
+output: html_document
+---
+
+```{r}
+# install.packages("tidyverse")
+# install.packages("dplyr")
+# install.packages("aod")
+library(tidyverse)
+library(dplyr)
+library(aod)
+
+msleep <- glimpse(msleep)
+storms <- storms
+lizards <- lizards
+```
+
+
+
+
+```{r}
+ # Q1
+head(msleep)
+data("msleep")
+
+msleep |> filter(awake>=12) |> select(awake)
+
+```
+
+
+```{r}
+
+# Q2
+
+percent_day_awake <- msleep |> mutate(percent_day_awake = (awake/24*100)) |> 
+select(percent_day_awake, everything()) 
+
+percent_day_awake
+
+```
+
+
+
+
+```{r}
+# Q4
+
+head(storms)
+data("storms")
+
+storms |> filter(wind>50) |> arrange(desc(wind))
+```
+
+
+```{r}
+ # Q3
+
+data("storms")
+
+storms |> group_by(year) |> summarize(num_storms=n())
+
+```
+
+
+```{r}
+
+# Q5
+
+lizards
+
+ggplot(lizards,
+       aes(x=Site, y= opalinus))+
+  geom_boxplot(fill = "Blue") + labs( title= "Sun vs Shade")
+
+```
+
