@@ -1,0 +1,124 @@
+---
+title: "prac"
+author: "Diego S. Lopez"
+date: "2026-10-20"
+output: html_document
+---
+
+```{r}
+height <- 175
+height
+
+```
+```{r}
+
+value <- 25*4-10
+value
+  
+```
+
+```{r}
+test <- 15 < 20
+test
+```
+```{r, warning=FALSE}
+
+log(-1)
+
+```
+```{r, message=FALSE}
+library(dplyr)
+```
+
+```{r}
+grades <- c(80, 90, 75, 85, 95)
+mean(grades)
+```
+```{r}
+class("gapminder")
+```
+```{r}
+
+library(gapminder)
+head(gapminder)
+data("gapminder")
+gapminder |> 
+  filter(lifeExp < 29) |> 
+  head(6)
+
+```
+
+```{r}
+gapminder |> filter(country == "Rwanda", year > 1979) |> head(6)
+```
+
+```{r} 
+new <- gapminder |> select(-gdpPercap) |> head(6)
+```
+
+```{r}
+gapminder |> 
+  arrange(lifeExp) |> head(6)
+```
+```{r}
+gapminder |>
+  arrange(desc(lifeExp))
+```
+```{r}
+neww <- gapminder |> select(year, lifeExp)
+neww
+ 
+```
+
+```{r}
+gapminder |> filter(country== "Cambodia") |> select(year, lifeExp)
+```
+
+```{r}
+gapminder |> filter(continent== "Africa")
+
+```
+
+```{r}
+lifeExp_months <- gapminder |> mutate(lifeExp_months = lifeExp * 12) |> select(-lifeExp)
+lifeExp_months
+
+```
+
+
+```{r}
+library(ggplot2)
+data("trees")
+head("trees")
+
+ggplot(trees, aes(x= Girth)) + geom_histogram(fill = "black", color= "blue", binwidth = 2) + labs(title = "Distribution of girth")
+
+```
+
+```{r}
+library(ggplot2)
+ggplot(trees, aes(x= Volume)) + geom_histogram(fill = "pink", color= "yellow", bindwidth = 2) + labs(title = "Distribution of Volume")
+```
+
+
+```{r}
+library(ggplot2)
+ggplot(trees, aes(x= Volume, y=Girth)) + geom_point(fill = "blue", color="red", bindwidth = 4) + labs(title= "Volume vs Girth")
+
+```
+
+```{r}
+library(ggplot2)
+shapiro.test(trees$Volume)
+
+# not normal distribution
+
+```
+```{r}
+library(ggplot2)
+shapiro.test(trees$Girth)
+
+# Normal
+```
+
+

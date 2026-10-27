@@ -1,0 +1,38 @@
+---
+title: "practice"
+author: "Diego S. Lopez"
+date: "2026-10-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+height <- 175
+height
+
+```
+```{r}
+message <- "R is fun!"
+
+message
+```
+```{r}
+a <- 5
+b <- 10
+c <- a + b
+c
+```
+```{r}
+15>20
+```
+```{r}
+class("Hello World")
+```
+```{r}
+
+```
+
+
