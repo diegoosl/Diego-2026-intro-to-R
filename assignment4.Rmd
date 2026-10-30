@@ -1,0 +1,70 @@
+---
+title: "Assignment4"
+author: "Diego S. Lopez"
+date: "2026-10-30, 4:30 p.m."
+output: html_document
+---
+
+```{r}
+library(asbio)
+library(tidyverse)
+library(lessR)
+library(readxl)
+library(BSDA)
+library(ggplot2)
+butterflies <- read_excel("butterflies_pesticides.xlsx") 
+  
+```
+
+```{r}
+
+view(butterflies)
+head(butterflies)
+```
+
+```{r}
+# Question1
+
+by(butterflies$`Wing Length`, butterflies$Group, shapiro.test)
+
+## Both don't reject normality.
+
+```
+```{r}
+# Question 2
+
+var.test(`Wing Length` ~ Group, data = butterflies)
+
+#3 We reject the null hypotesis
+
+```
+
+```{r}
+# Q3
+
+t.test(`Wing Length` ~ Group,
+       data = butterflies,
+       var.equal = FALSE)
+
+## We reject the null hypotesis
+
+```
+```{r}
+# Q4
+
+ggplot(butterflies,
+       aes(x = Group, y = `Wing Length`, fill = Group)) + 
+  geom_boxplot() + labs(
+    title = "Effect on Pesticides on Butterfly Wing Length"
+  )
+
+
+```
+```{r}
+# Q5
+
+### We investigated if pesticide exposure during the larval stage affects butterfly wing length by comparing untreated and pesticide treated butterflies. We analyzed 80 butterflies, with 40 individuals in each group. The Shapiro-Wilk test indicated no significant deviations from normality in both groups (p=0.146, p=0.6247), while an F-test revealed unequal variances (F(39,39) = 0.40274, p = 0.005512). Using Welch's two-sample t-test, we found a significant difference in mean wing length (t(66.029) = 3.9832, p = 0.0001721), with untreated butterflies having larger wings (632.18) than treated butterflies (593.49) on average. These findings sugest that pesticide exposure may negatively affect wing development, potencially influencing butterfly flight and survival.
+
+
+```
+
